@@ -7,6 +7,11 @@ func add(a int, b int) int {
 }
 
 func main() {
-	result := add(100, 17)
-	fmt.Println(result)
+	var a, b int
+
+	fmt.Scan(&a)
+	fmt.Scan(&b)
+
+	sum := add(a, b)
+	fmt.Println(sum)
 }
