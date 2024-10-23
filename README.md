@@ -1,2 +1,2 @@
 # LanShan-s-program
-the homework and ptactice  about LanShan
+the homework and practice  about LanShan
