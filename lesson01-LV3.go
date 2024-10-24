@@ -16,8 +16,9 @@ func isPrime(num int) bool {
 	if num%2 == 0 || num%3 == 0 {
 		return false
 	}
-	for i := 5; i*i <= num; i += 6 {
-		if num%i == 0 || num%(i+2) == 0 {
+	//如果一个数不是素数，它必定有根小于它的平方根
+	for i := 5; i*i <= num; i += 6 { //任何素数都可以写成6k+-1的形式
+		if num%i == 0 || num%(i+2) == 0 { //i与i+2分别是当前k值下的6k+1和6k-1
 			return false
 		}
 	}
