@@ -4,24 +4,23 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func isPrime(num int) bool {
 	if num <= 1 {
 		return false
 	}
-	if num <= 3 {
-		return true
-	}
-	if num%2 == 0 || num%3 == 0 {
-		return false
-	}
+
 	//如果一个数不是素数，它必定有根小于它的平方根
-	for i := 5; i*i <= num; i += 6 { //任何素数都可以写成6k+-1的形式
-		if num%i == 0 || num%(i+2) == 0 { //i与i+2分别是当前k值下的6k+1和6k-1
+	for i := 2; i <= int(math.Sqrt(float64(num))); i++ {
+		if num%i == 0 {
 			return false
 		}
 	}
+
 	return true
 }
 
@@ -31,7 +30,7 @@ func main() {
 	fmt.Scan(&num)
 
 	if isPrime(num) {
-		fmt.Printf(":%d is prime\n\n", num)
+		fmt.Printf(":%d is prime\n", num)
 	} else {
 		fmt.Printf("%d is not prime\n", num)
 	}
