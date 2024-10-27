@@ -3,6 +3,21 @@
 
 package main
 
+//var r float64
+
+//func main() {
+
+//fmt.Scan(&r)
+
+//pi := math.Pi
+//area := pi * r * r
+
+//fmt.Printf("area is %f", area)
+
+//}
+
+//模块化写法
+
 import (
 	"fmt"
 	"math"
@@ -12,8 +27,8 @@ func Multiply(r float64) float64 {
 	pi := math.Pi
 	return pi * r * r
 }
-func main() {
 
+func main() {
 	var r float64
 	fmt.Scan(&r)
 
