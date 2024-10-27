@@ -14,7 +14,7 @@ func isPrime(num int) bool {
 		return false
 	}
 
-	//如果一个数不是素数，它必定有根小于它的平方根
+	//如果一个数不是素数，它必定有根小于它的平方根.
 	for i := 2; i <= int(math.Sqrt(float64(num))); i++ {
 		if num%i == 0 {
 			return false
